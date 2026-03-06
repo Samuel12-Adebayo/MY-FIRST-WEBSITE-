@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Fun Facts</title>
+</head>
+<body>
+    <h1>Random Fun Facts</h1>
+    <p id="fact"></p>
+    <button onclick="newFact()">Get a new fun fact!</button>
+
+    <script>
+        const facts = [
+            "Honey never spoils.",
+            "Bananas are berries, but strawberries are not.",
+            "There are more stars in the universe than grains of sand on Earth.",
+            "Avocados are fruits, not vegetables.",
+            "Octopuses have three hearts."
+        ];
+
+        function newFact() {
+            const randomIndex = Math.floor(Math.random() * facts.length);
+            document.getElementById('fact').innerText = facts[randomIndex];
+        }
+    </script>
+</body>
+</html>
